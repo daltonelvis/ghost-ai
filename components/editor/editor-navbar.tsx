@@ -9,6 +9,10 @@ interface EditorNavbarProps {
   sidebarToggleRef?: Ref<HTMLButtonElement>
 }
 
+/**
+ * Renders the editor toolbar with a toggle reflecting `isSidebarOpen`.
+ * Clicking the toggle calls `onToggleSidebar`; the parent owns sidebar state.
+ */
 export function EditorNavbar({
   isSidebarOpen,
   onToggleSidebar,

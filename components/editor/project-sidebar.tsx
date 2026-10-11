@@ -9,6 +9,12 @@ interface ProjectSidebarProps {
   onClose: () => void
 }
 
+/**
+ * Renders a floating project panel with placeholder tabs and a New Project
+ * button that has no action yet. When `isOpen` is false, the panel stays mounted
+ * but slides out of view, is inert, and is hidden from assistive technology.
+ * The close button calls `onClose`; the parent must update `isOpen`.
+ */
 export function ProjectSidebar({ isOpen, onClose }: ProjectSidebarProps) {
   return (
     <aside
@@ -70,6 +76,7 @@ interface EmptyStateProps {
   description: string
 }
 
+/** Renders a centered icon and message for a project tab's empty state. */
 function EmptyState({ icon: Icon, title, description }: EmptyStateProps) {
   return (
     <div className="flex flex-1 flex-col items-center justify-center gap-2 px-2 text-center">
