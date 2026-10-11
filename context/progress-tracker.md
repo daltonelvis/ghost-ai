@@ -18,6 +18,7 @@ Update this file whenever the current phase, active feature, or implementation s
 - 02 Editor chrome (`context/feature-specs/02-editor.md`):
   - [x] `components/editor/editor-navbar.tsx` — fixed-height top bar, left/center/right sections, sidebar toggle (`PanelLeftOpen` / `PanelLeftClose`), empty right section, dark background with subtle bottom border.
   - [x] `components/editor/project-sidebar.tsx` — floating overlay that slides in from the left without pushing content, `isOpen` prop, `Projects` header with close button, `My Projects` / `Shared` tabs with empty states, full-width `New Project` button with `Plus` icon.
+  - [x] Closing the project sidebar from its close button returns focus to the navbar sidebar toggle.
   - [x] Dialog pattern — `components/editor/editor-dialog.tsx`, token-styled wrapper supporting title, description, and footer actions (no concrete dialogs yet).
   - [x] Verify: `tsc` clean, `eslint` clean, `next build` passes, prerendered `/` contains navbar toggle, sidebar header, both tabs, empty state, and New Project button.
 

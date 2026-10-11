@@ -1,15 +1,18 @@
 import { PanelLeftClose, PanelLeftOpen } from "lucide-react"
+import type { Ref } from "react"
 
 import { Button } from "@/components/ui/button"
 
 interface EditorNavbarProps {
   isSidebarOpen: boolean
   onToggleSidebar: () => void
+  sidebarToggleRef?: Ref<HTMLButtonElement>
 }
 
 export function EditorNavbar({
   isSidebarOpen,
   onToggleSidebar,
+  sidebarToggleRef,
 }: EditorNavbarProps) {
   const ToggleIcon = isSidebarOpen ? PanelLeftClose : PanelLeftOpen
 
@@ -17,6 +20,7 @@ export function EditorNavbar({
     <header className="grid h-14 shrink-0 grid-cols-[1fr_auto_1fr] items-center border-b border-surface-border bg-surface px-3">
       <div className="flex items-center gap-2">
         <Button
+          ref={sidebarToggleRef}
           variant="ghost"
           size="icon"
           onClick={onToggleSidebar}
